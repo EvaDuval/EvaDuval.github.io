@@ -65,6 +65,17 @@
     p {
       font-family: "Lato", sans-serif;
     }
+        /* CSS pour styliser les projets */
+    .project {
+      border: 1px solid #ccc; /* Bordure grise */
+      padding: 20px; /* Espacement intérieur */
+      margin: 10px; /* Marge extérieure */
+      width: 30%; /* Largeur de chaque projet */
+      display: inline-block; /* Afficher en ligne */
+      vertical-align: top; /* Alignement vertical en haut */
+      box-sizing: border-box; /* Inclure les bordures dans les dimensions */
+      text-align: center; /* Centrer le contenu */
+    }
 
     /* CSS pour centrer les sections */
     section {
@@ -111,11 +122,29 @@
 
   <section id="PROJETS">
     <h2>PROJETS</h2>
-    <!-- Exemple de projet -->
-    <h3>Data Mining</h3>
-    <p>Prédiction résiliation d'un contrat bancaire</p>
-    <a href="https://github.com/EvaDuval/DataMining.git"> Lien du projet</a>
-    <!-- Ajoutez d'autres PROJETS de la même manière -->
+    <!-- Premier projet -->
+    <div class="project">
+      <img src="image1.jpg" alt="Projet 1" width="200" height="150">
+      <h3>Data Mining 1</h3>
+      <p>Prédiction résiliation d'un contrat bancaire</p>
+      <a href="https://github.com/EvaDuval/DataMining.git">Lien GitHub</a>
+    </div>
+
+    <!-- Deuxième projet -->
+    <div class="project">
+      <img src="image2.jpg" alt="Projet 2" width="200" height="150">
+      <h3>Template PowerBI</h3>
+      <p>Description courte du Projet 2</p>
+      <a href="lien_github_projet2">Lien GitHub</a>
+    </div>
+
+    <!-- Troisième projet -->
+    <div class="project">
+      <img src="image3.jpg" alt="Projet 3" width="200" height="150">
+      <h3>Nom du Projet 3</h3>
+      <p>Description courte du Projet 3</p>
+      <a href="lien_github_projet3">Lien GitHub</a>
+    </div>
   </section>
 
   <!-- Script JavaScript pour gérer la navigation -->
