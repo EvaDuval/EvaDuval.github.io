@@ -25,11 +25,12 @@
       margin-top: 20px; /* Ajouter un espace au-dessus du bouton */
     }
 
-/* CSS pour ajouter une marge en bas du bouton */
-  .download-button {
-    margin-bottom: 20px; /* Ajouter une marge en bas */
-  }    
-        /* Ceci est juste un exemple de style minimal */
+    /* CSS pour ajouter une marge en bas du bouton */
+    .download-button {
+      margin-bottom: 20px; /* Ajouter une marge en bas */
+    }
+
+    /* Ceci est juste un exemple de style minimal */
     body {
       font-family: Lato, sans-serif;
       margin: 0;
@@ -53,9 +54,10 @@
     }
     section {
       padding: 20px;
+      display: none; /* Masquer toutes les sections par défaut */
     }
 
-        h1 {
+    h1 {
       font-family: "Garet", sans-serif;
     }
 
@@ -63,8 +65,11 @@
     p {
       font-family: "Lato", sans-serif;
     }
-        section {
-      margin: 20px; /* Ajouter des marges autour de chaque section */
+
+    /* CSS pour centrer les sections */
+    section {
+      margin: 20px auto; /* Centrer les sections horizontalement */
+      max-width: 800px; /* Limiter la largeur des sections */
     }
   </style>
 </head>
@@ -85,17 +90,16 @@
     <p>Bonjour, je suis Eva Duval, j'ai 21 ans et je viens de Rennes. 
       <br>Je suis actuellement en première année de Master Big Data à l'école Sup de Vinci de Rennes. C'est un master qui s'effectue en alternance et je suis donc en alternance depuis septembre 2023 à Timac Agro France en tant que Data Analyst.</br>
     </p>
-    <p>A part le domaine de la BI, voici d'autres activité que j'aime faire :
+    <p>A part le domaine de la BI, voici d'autres activités que j'aime faire :
       <ul>
         <li>le handball</li>
         <li>la plongée sous-marine </li>
         <li>les voyages</li>
       </ul>
     </p>
-    
   </section>
 
-  <section id="cv">
+  <section id="CV">
     <h2>CV</h2>
     <div class="button-container">
       <a href="CV.pdf" download>
@@ -114,6 +118,37 @@
     <a href="lien_vers_projet_1">Détails du Projet 1</a>
     <!-- Ajoutez d'autres PROJETS de la même manière -->
   </section>
+
+  <!-- Script JavaScript pour gérer la navigation -->
+  <script>
+    // Fonction pour afficher la section correspondant à l'ancre cliquée
+    function afficherSection(idSection) {
+      // Masquer toutes les sections
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      // Afficher la section correspondant à l'id
+      var section = document.getElementById(idSection);
+      section.style.display = 'block';
+    }
+
+    // Fonction pour écouter les clics sur les liens du menu de navigation
+    var liens = document.querySelectorAll('nav a');
+    liens.forEach(function(lien) {
+      lien.addEventListener('click', function(e) {
+        // Empêcher le comportement par défaut du lien
+        e.preventDefault();
+        // Récupérer l'ID de la section cible à partir de l'attribut href
+        var idSection = this.getAttribute('href').substring(1);
+        // Appeler la fonction pour afficher la section correspondante
+        afficherSection(idSection);
+      });
+    });
+
+    // Afficher la première section au chargement de la page
+    document.getElementById('PRESENTATION').style.display = 'block';
+  </script>
 
 </body>
 </html>
