@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Eva Duval</title>
+  <style>
+    /* Ajoutez vos styles CSS ici */
+
+    /* CSS pour cacher les sections autres que la présentation */
+    #cv, #projets {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Eva Duval</h1>
+    <p>Data Analyst en alternance</p>
+  </header>
+
+  <nav>
+    <a href="#Présentation">Présentation</a>
+    <a href="#CV">CV</a>
+    <a href="#Projets">Projets</a>
+  </nav>
+
+  <section id="Présentation">
+    <h2>Présentation</h2>
+    <p>Bonjour tout le monde, je suis Eva Duval, j'ai 21 ans et je viens de Rennes, France. 
+      <br>Je suis actuellement en première année de Master Big Data à l'école Sup de Vinci de Rennes. C'est un master qui s'effectue en alternance et je suis donc en alternance depuis septembre 2023 à Timac Agro France en tant que Data Analyst.</br>
+    </p>
+    <p>A part le domaine de la BI, voici d'autres activité que j'aime faire :
+      <ul>
+        <li>le handball</li>
+        <li>la plongée sous-marine </li>
+        <li>les voyages</li>
+      </ul>
+    </p>
+  </section>
+
+  <section id="CV">
+    <h2>CV</h2>
+    <p>Contenu de la section CV</p>
+  </section>
+
+  <section id="Projets">
+    <h2>Projets</h2>
+    <p>Contenu de la section Projets</p>
+  </section>
+
+  <!-- Script JavaScript pour gérer la navigation -->
+  <script>
+    // Fonction pour afficher la section correspondant à l'ancre cliquée
+    function afficherSection(idSection) {
+      // Masquer toutes les sections
+      var sections = document.querySelectorAll('section');
+      sections.forEach(function(section) {
+        section.style.display = 'none';
+      });
+      // Afficher la section correspondant à l'id
+      var section = document.getElementById(idSection);
+      section.style.display = 'block';
+    }
+
+    // Fonction pour écouter les clics sur les liens du menu de navigation
+    var liens = document.querySelectorAll('nav a');
+    liens.forEach(function(lien) {
+      lien.addEventListener('click', function(e) {
+        // Empêcher le comportement par défaut du lien
+        e.preventDefault();
+        // Récupérer l'ID de la section cible à partir de l'attribut href
+        var idSection = this.getAttribute('href').substring(1);
+        // Appeler la fonction pour afficher la section correspondante
+        afficherSection(idSection);
+      });
+    });
+  </script>
+
+</body>
+</html>
