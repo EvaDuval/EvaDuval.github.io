@@ -5,12 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio Eva Duval</title>
   <style>
-    /* Ajoutez vos styles CSS ici */
-    /* CSS pour centrer le bouton */
-    .button-container {
-      text-align: center; /* Centrer horizontalement */
-      margin-top: 20px; /* Ajouter un espace au-dessus du bouton */
-    }
     /* CSS pour styliser le bouton de téléchargement */
     .download-button {
       background-color: #323b4c; /* Couleur de fond du bouton */
@@ -21,35 +15,14 @@
       text-decoration: none; /* Supprimer la décoration du texte */
       display: inline-block; /* Afficher en ligne */
       font-size: 16px; /* Taille de la police */
-      margin: 0 auto; /* Centrer horizontalement */
       cursor: pointer; /* Définir un curseur sur le bouton */
       border-radius: 10px; /* Ajouter des coins arrondis */
     }
-  </style>
-    /* Ceci est juste un exemple de style minimal */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-    header {
-      background-color: #333;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    nav {
-      background-color: #f4f4f4;
-      padding: 10px;
-      text-align: center;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      padding: 10px 20px;
-    }
-    section {
-      padding: 20px;
+
+    /* CSS pour centrer horizontalement le bouton */
+    .button-container {
+      text-align: center; /* Centrer horizontalement */
+      margin-top: 20px; /* Ajouter un espace au-dessus du bouton */
     }
   </style>
 </head>
@@ -60,7 +33,7 @@
   </header>
 
   <nav>
-    <a href="#Home">Présentation</a>
+    <a href="#Présentation">Présentation</a>
     <a href="#CV">CV</a>
     <a href="#Projets">Projets</a>
   </nav>
@@ -79,14 +52,17 @@
     </p>
     
   </section>
-<section id="cv">
-  <h2>CV</h2>
-  <p>Voici mon CV :</p>
-  <img src="CV.jpg" alt="CV" width="500" height="700" style="display: block; margin: 0 auto 20px;">
-  <a href="CV.pdf" download>
-    <button class="download-button">Télécharger le CV</button>
-  </a>
-</section>
+
+  <section id="cv">
+    <h2>CV</h2>
+    <p>Voici mon CV :</p>
+    <img src="CV.jpg" alt="CV" width="500" height="700" style="display: block; margin: 0 auto 20px;">
+    <div class="button-container">
+      <a href="CV.pdf" download>
+        <button class="download-button">Télécharger le CV</button>
+      </a>
+    </div>
+  </section>
 
   <section id="projets">
     <h2>Projets</h2>
